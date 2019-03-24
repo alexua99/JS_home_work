@@ -9,6 +9,7 @@
 <body>
     
     <script type="text/javascript">
+    /*
         // Дано два целых числа, которые являются сторонами прямоугольника. Найти площадь прямоугольника.
             var a = Number(prompt('a='));
             var b = Number(prompt('b='));
@@ -28,6 +29,20 @@
             var b = Number(prompt("Введите В"));
             var p = 2*(a+b);
             alert("p = "+" "+p );
+        */
+        // Дано сторони двох різних квадратів. Обчислити на скільки площа одного з квадратів більше площі іншого.
+        var a = Number(prompt("Квадрат А"));
+        var b = Number(prompt("Квадрат В"));  
+        var ax = a - b;
+        var bx = b - a;
+        if (ax > bx){
+            alert("Квадрат В ="+bx+" "+"Квадрат А = "+ax + 'А - больше');
+        }else if(bx > ax){
+            alert("Квадрат A ="+ax+" "+"Квадрат B = "+bx + 'B - больше');
+        }else if(ax == bx){
+            alert('Значение равное');
+        };
+
     </script>
 </body>
 </html>
