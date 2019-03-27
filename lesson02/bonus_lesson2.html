@@ -9,10 +9,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        span{
-            padding: 5px;
+        div{
+            padding: 20px;
+            background-color: aquamarine;
+            border-radius: 10%;
             border: 1px solid black;
             margin: 2px;
+            display: inline-block;
+            transition: all 2s;
+        }
+        div:hover{
+            background-color: brown;
         }
     </style>
 </head>
@@ -20,13 +27,21 @@
     
 
     <script type="text/javascript">
+    // с помощью document.write() вывести в окно браузера кнопки калькулятора
+    // примерно как на картинке
+    // для вывода цифр от 1 до 9 использовать цикл 
+        var a = 0;
+        var v = " - ";
+        var c = " + ";
+        for (var i = 1; i < 10; i++){
+            document.write('<div>'+i+'</div>');
+            if ( i % 3 == 0){
+                document.write("<br/>");
+            }
+            
+        };document.write('<div>'+a+'</div>'+'<div>'+v+'</div>'+'<div>'+c+'</div>');
 
-     var dig = prompt('Введите число:', '')
-     var table = '';
-      for (var i = 1; i <= 10; i++) {
-      table += dig + '*' + i + '=' + dig * i + '\n';
-      }
-       console.log(table)
+
     </script>
 </body>
 </html>
