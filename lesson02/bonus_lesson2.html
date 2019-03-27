@@ -1,0 +1,32 @@
+<!-- с помощью document.write() вывести в окно браузера кнопки калькулятора
+примерно как на картинке
+для вывода цифр от 1 до 9 использовать цикл -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            padding: 5px;
+            border: 1px solid black;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+
+     var dig = prompt('Введите число:', '')
+     var table = '';
+      for (var i = 1; i <= 10; i++) {
+      table += dig + '*' + i + '=' + dig * i + '\n';
+      }
+       console.log(table)
+    </script>
+</body>
+</html>
