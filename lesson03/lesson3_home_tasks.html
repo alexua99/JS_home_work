@@ -12,26 +12,46 @@
     //    Функция должна расчитывать результат операции, исходя из переданного ей знака.
     //    Функция должна проверять корректность введенных чисел и знака операции.
     //    Все аргументы для функции принять от пользователя.
-     var operand1 = +prompt("Namber One");
-      var operand2 = +prompt("Namber Twe");
-      var sign = prompt("sing");
-  
-      var res = calculate(operand1, operand2, sign);
+    /*
+    var operand1 = +prompt("Namber One");
+    var operand2 = +prompt("Namber Twe");
+    var sign = prompt("sing");
 
-      function calculate(operand1, operand2, sign) {
-  
+    var res = calculate(operand1, operand2, sign);
+
+    function calculate(operand1, operand2, sign) {
+
       var result;
       switch (sign) {
         case "+": {
-            result = operand1 + operand2;
-            break;
+          result = operand1 + operand2;
+          break;
         }
-        case " - "
-      }
-       
+        case "-": {
+          result = operand1 - operand2;
+          break;
+        }
+        case " * ": {
+          result = operand1 * operand2;
+        }
+        case " / ": {
+          result = operand1 / operand2;
+        }
+        case " % ": {
+          result = operand1 % operand2;
+        }
+      };
+
       return result;
     }
-    document.write(res);
+    document.write(`
+        ${operand1}
+        ${sign}
+        ${operand2}
+         =
+        ${res}
+      `);
+      */
   </script>
 
   <script>
@@ -41,12 +61,32 @@
   </script>
 
   <script>
-// 3.  Создать игру "Камень-Ножницы-Бумага".
-//     Выбор компьютера определяется строкой:
-//     var computerChoice = Math.random();
-//     alert(computerChoice);
-//     Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+    // 3.  Создать игру "Камень-Ножницы-Бумага".
+    //     Выбор компьютера определяется строкой:
+    //     var computerChoice = Math.random();
+    //     alert(computerChoice);
+    //     Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+    function randomMatch(min, max) {
+      if (max === undefined) {
+        max = min;
+        min = 0;
+      };
+      return Math.round(Math.random() * (max - min)) + min;
+    };
 
+    var gamesNumber = randomMatch(1, 4);
+    for (var i = 1; i < 5; i++) {
+      var gamesUser = +prompt("Number");
+      if (gamesNumber == 1){
+        alert("Камень");
+      }else if (gamesNumber == 2){
+        alert("Ножницы");
+      }else if (gamesNumber == 3){
+        alert("Бумага");
+      }else if (gamesNumber == 4){
+        alert("Колодец");
+      };
+    };
 
   </script>
 
