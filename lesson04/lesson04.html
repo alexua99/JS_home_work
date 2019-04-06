@@ -29,8 +29,8 @@
 
         //2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
         // Результат должен выводиться в консоль.
-        /*
-        const getMinAndMax = new Array(21, 1, 43, 111, 54, 76);
+
+        var getMinAndMax = new Array(21, 1, 43, 111, 54, 76);
         function shortNum(num) {
             num.sort(function (a, b) { return a - b });
             document.write(num[0] + "<br/>" + num[num.length - 1] + "<br/>");
@@ -41,34 +41,31 @@
         // 3. Определить элементы массива и вывести их значения,
         // индексы которых лежит в указанном пределе.Предел вводит пользователь.
 
-        const arry01 = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        for (var i = 0; i < arry01.length; i++) {
-            document.write(arry01[i] + "<br/>");
-        };
-        const x1 = +prompt("Num1");
-        const y1 = +prompt("Num2");
-        const arry02 = arry01.slice(x1, y1);
-        document.write(arry02 + "<br/>");
-
+        var arry01 = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        alert(arry01);
+        var x1 = +prompt("Num1 s");
+        var y1 = +prompt("Num2 do");
+        var arry02 = arry01.slice(x1, y1);
+        alert(arry02);
+        
         //4. Отсортировать массив на 10 чисел в порядке возростания.Значения принимаются от пользователя.Сортировка осушествляется методом sort().
-        const numArray = [2, 6, 5, 3, 1, 4, 9, 7, 10, 8];
+        var numArray = [2, 6, 5, 3, 1, 4, 9, 7, 10, 8];
         for (var i = 0; i < numArray.length; i++) {
             numArray.sort(function (a, b) { return a - b });
-            document.write(numArray[i] + "<br/>");
+            document.write(numArray[i]);
         };
-
-
+        document.write('<br/>');
 
         //5. Создать программу, выполняющую вставку элемента в массив после элемента,
         // значение которого укажет пользователь.
-
+        var element = ["элемент1", "элемент2", "элемент3", "элемент4", "элемент5", "элемент6"];
         var elementOne = prompt("Выберете первый элемент с 0 до 6");
         var insertOne = prompt("Текст вставки 1 элемента");
         var elementTew = prompt("Выберете второй элемент с 0 до 6");
         var insertTew = prompt("Текст вставки 2 элемента");
-        element = element.map(function (course) {
+        var element = element.map(function (course) {
             if (course === element[elementOne]) {
-                course += " - " +  insertOne;
+                course += " - " + insertOne;
             }
             if (course === element[elementTew]) {
                 course += " - " + insertTew;
@@ -78,10 +75,11 @@
         for (var j = 0; j < element.length; j++) { document.write(element[j] + '<br/>'); };
 
 
-    //6. Необходимо получить предпоследний элемент из массива month и вывести его на экран.
-    //var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
-    var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
-    alert(month[month.length -2])
+        //6. Необходимо получить предпоследний элемент из массива month и вывести его на экран.
+        //var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+        alert(month);
+        alert(month[month.length - 2])
 
         //7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором
         // - количество игроков в команде / объем двигателя / количество жителей в городе.Объединить данные из двух массивов и вывести их в одну строку.  -- >
@@ -92,7 +90,7 @@
             sum.push(element01[i], element02[i]);
         }
         document.write(sum + " ");
-        */
+
     </script>
 </body>
 
