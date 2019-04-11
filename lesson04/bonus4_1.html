@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+
+
+
+	<script>
+		//Определить, является ли заданная строка (фраза) палиндромом
+		// var s = "А РОЗА УПАЛА НА ЛАПУ АЗОРА"; // палиндром
+		var str1 = "А РОЗА УПАЛА НА ЛАПУ АЗОРА";
+		
+			var strSplit = str1.split('');
+			var str2 = strSplit.join('');
+			var st = str2.replace(/\s/g, '');
+		document.write(st);
+
+		//var str3 = strSplit.reverse();
+		//var str4 = str3.join('');
+	//	document.write(str2 + "<br/>");
+		//document.write(str4)
+		  // if ( str2 == str4){
+		//	   document.write("Палиндром");
+		 //  }
+		/*function strin(str) {
+			var strSplit = str.split('');
+			strSplit.reverse();
+			document.write(strSplit.join(''));
+		}
+		strin(str1);
+		*/
+	</script>
+</body>
+
+</html>
