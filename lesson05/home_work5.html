@@ -41,7 +41,7 @@
       //1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
       // в каком квадранте в декартовой системе координат находится данная точка.
       // Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
-      /*
+      
        var n1 = +prompt("Input x");
        var n2 = +prompt("Input y");
        var point = {
@@ -64,7 +64,7 @@
         // 2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
       // Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
       // В зависимости от принятого знака операции, вызвать соответствующий метод.
-
+       /*
        var calculator = {
           n1: null,
           metodN: null,
@@ -134,12 +134,18 @@
          }
       }
 
-     // ЗАДАЧА номер 5
+      function pushh(b) {
+         this.occupation = new Object();
+         this.occupation.company = "2000";
+         
+      }
+
+      // ЗАДАЧА номер 5
       function sortT(a1) {
          var aName = inputData("Введите name, sName, age, occu");
          for (var ix = 0; ix < a1.length; ix++) {
             var arr1 = a1.sort();
-            if (aName === "Name") {
+            if (aName === "name") {
                document.write("Name" + " = " + arr1[ix].name + "<br/>");
             } else if (aName === "age") {
                document.write("Age" + " = " + arr1[ix].age + "<br/>");
@@ -150,7 +156,7 @@
             } else (alert("None"))
          };
       }
-
+      
       summa(array);
       result(array);
       sortT(array);
