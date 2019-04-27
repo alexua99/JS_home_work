@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    input {
+      border: 1px solid blue;
+    }
+    .spn:after{
+      content: 'ERROR';
+      color: red;
+      display: inline;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <form class='formWithValidation'>
+    <div>
+      <div>
+        <label>From:</label>
+      </div>
+      <div id="errorName" class="">
+        <input type='text' class='from' />
+      </div>
+    </div>
+    <div>
+      <div>
+        <label>Email:</label>
+      </div>
+      <div id="'errorMail">
+        <input type='text' class='mail' />
+      </div>
+    </div>
+    <div>
+      <div>
+        <label>Password:</label>
+      </div>
+      <div id="errorPass" class="">
+        <input type='password' class='password' />
+      </div>
+    </div>
+    <!--<div>
+      <div>
+        <label>Password confirmation:</label>
+      </div>
+      <div>
+        <input type='password' class='passwordConfirmation' />
+      </div>
+    </div>-->
+    <div>
+      <div>
+        <label>Where</label>
+      </div>
+    </div>
+    <input type='submit' class='validateBtn' value='Validate' />
+  </form>
+
+  <script>
+    var form = document.querySelector('.formWithValidation'); //присваевает Название формы
+    var validateBtn = form.querySelector('.validateBtn'); //Обращение к кнопке через класс
+    var userName = form.querySelector('.from') //Значение рфом
+    var userEmail = form.querySelector('.mail');
+    var userPassword = form.querySelector('.password');
+
+    var passConf = 'q2191946';
+
+    var addSpn = form.querySelector('.spn');
+
+    form.addEventListener('submit', function (event) { //нажате кнопки
+      event.preventDefault(); //Не дает перезагружать 
+      validName(userName);
+      validMail(userEmail);
+      validPass(userPassword);
+      
+      
+    });
+
+    function validName(name) {
+      //ПРОВЕРКА ИМЕН
+      if (name.langth < 4) {
+        name.style.border = '1px solid blue'
+        document.getElementById('errorName').classList.remove('spn');
+        console.log(name.value)
+        return true
+      }
+      if (name.value === '') {
+        name.style.border = "1px solid red";
+        document.getElementById('errorName').classList.add('spn');
+        return false
+      }
+    }
+    function validMail(mail) {
+      //ПРОВЕРКА 
+      if (mail.value === '') {
+        mail.style.border = '1px solid red'
+        return false;
+      }
+      if (mail.valid != '') {
+        mail.style.border = '1px solid blue'
+      //  console.log(mail.value)
+        return true;
+      }
+    }
+    function validPass(pass) {
+      //ПРОВЕРКА ИМЕНИ
+      if (pass.value != passConf) {
+        pass.style.border = "1px solid red";
+        return false;
+      }
+      if (pass.valid == passConf) {
+        pass.style.border = '1px solid blue'
+      //  console.log(pass)
+        return true;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

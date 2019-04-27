@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='list'>
+        <input type="text" id="inp01">
+        <button id="login" onclick="creatInput()">Login</button>
+        <button id="exit">EXIT</button>
+    </div>
+
+
+    <script>
+        var userLogin = document.getElementById('login');
+        var userExit = document.getElementById('exit');
+
+        var input1 = document.getElementById('inp01');
+
+        function creatInput() {
+            var newLi = document.createElement('li');
+            newLi.innerHTML = 'Привет, мир!';
+
+            list.insertBefore(newLi, list.children[1]);
+
+        }
+    </script>
+</body>
+
+</html>
