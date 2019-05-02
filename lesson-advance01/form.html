@@ -69,7 +69,7 @@
     var userEmail = form.querySelector('.mail');
     var userPassword = form.querySelector('.password');
 
-    var passConf = 'q2191946';
+    var passConf = '123456';
 
     var addSpn = form.querySelector('.spn');
 
@@ -84,10 +84,10 @@
 
     function validName(name) {
       //ПРОВЕРКА ИМЕН
-      if (name.langth < 4) {
+      if (name.value != '') {
         name.style.border = '1px solid blue'
         document.getElementById('errorName').classList.remove('spn');
-        console.log(name.value)
+       // console.log(name.value)
         return true
       }
       if (name.value === '') {
@@ -114,7 +114,7 @@
         pass.style.border = "1px solid red";
         return false;
       }
-      if (pass.valid == passConf) {
+      if (pass.valid === passConf) {
         pass.style.border = '1px solid blue'
       //  console.log(pass)
         return true;
