@@ -10,14 +10,18 @@
         input {
             display: block;
         }
+        .blok{
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div id='list'>
         <input type="text" id="inp01">
+        <input type="password" id="inp02" class="blok">
         <button id="login" onclick="creatInput()">Login</button>
-        <button id="exit">EXIT</button>
+        <button id="exit" onclick="creatInputExit()">EXIT</button>
     </div>
 
 
@@ -25,11 +29,11 @@
         var userLogin = document.getElementById('login');
         var userExit = document.getElementById('exit');
 
-        var input1 = document.getElementById('inp01');
-
         function creatInput() {
-           
-            
+            document.getElementById('inp02').style.display = 'block';  
+        }
+        function creatInputExit() {
+            document.getElementById('inp02').style.display = 'none';
         }
     </script>
 </body>
